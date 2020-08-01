@@ -12,6 +12,6 @@ Then type in (make sure u have leafpad installed or use any other text editor. n
 
 sudo leafpad .bashrc
 
-And then clear the contents of the file and paste the contents of that bashlook.txt file into your .bashrc file.
+And then clear the contents of the file and paste the contents of that .bashrc file into your .bashrc file.
 
 And save file and exit the terminal and reopen.
