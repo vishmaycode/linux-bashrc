@@ -1,13 +1,15 @@
-Its just a .bashrc files contents which can be used on any linux distro running bash terminal.
+It's a .bashrc file which can be used on any linux distro running bash terminal.
 
-U just have to be on your home folder.
+You just have to be on your home folder.
 
 cd ~
 
-Then type in (make sure u have leafpad installed or use any other text editor. nano can also be used).
+Then type in 
 
-sudo leafpad .bashrc
+sudo gedit .bashrc
 
-And then copy paste the contents of this .bashrc file into your .bashrc file.
+(make sure u have gedit installed or use any other text editor)
+
+And then copy paste the contents of this '.bashrc' file into your '.bashrc' file or just replace that file with this file.
 
 And save file and exit the terminal and reopen.
