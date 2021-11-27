@@ -39,16 +39,16 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
     else
-	color_prompt=
+    color_prompt=
     fi
 fi
 
@@ -89,9 +89,17 @@ alias la='ls -A'
 alias l='ls -CF' 
 
 # custom alias
-alias sapt='sudo apt'
+alias s='sudo'
+alias sa='sudo apt'
 alias sai='sudo apt install'
 alias bt='sudo systemctl start bluetooth.service'
+alias key='cat /home/master/.key.txt'
+alias speed='speedometer -n 625 -m 16777216 -r wlp2s0'
+alias p='python'
+alias xampp='cd /opt/lampp && sudo ./manager-linux-x64.run'
+alias workb='sudo mysql-workbench %f'
+alias sub='cd /opt/lampp/htdocs && sudo subl'
+alias firefox2='/home/master/Downloads/installed/firefox-93.0/firefox -no-remote -P firefox-93.0'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -112,3 +120,7 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+# display ram usage
+x=`inxi -I`
+echo -e "\e[96m-->  \e[35m${x#*used:}\e" | sed 's/ Shell: bash inxi: 3.0.38 //' | sed 's/B/B -/' | sed 's/:/:     /'
