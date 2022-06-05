@@ -88,19 +88,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF' 
 
-# custom alias
-alias s='sudo'
-alias sa='sudo apt'
-alias sai='sudo apt install'
-alias bt='sudo systemctl start bluetooth.service'
-alias key='cat /home/master/.key.txt'
-alias speed='speedometer -n 625 -m 16777216 -r wlp2s0'
-alias p='python'
-alias xampp='cd /opt/lampp && sudo ./manager-linux-x64.run'
-alias workb='sudo mysql-workbench %f'
-alias sub='cd /opt/lampp/htdocs && sudo subl'
-alias firefox2='/home/master/Downloads/installed/firefox-93.0/firefox -no-remote -P firefox-93.0'
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
