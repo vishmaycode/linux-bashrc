@@ -162,3 +162,7 @@ extract() {
 # eval "$(atuin init bash)"
 
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# display ram usage
+# x=`inxi -I`
+# echo -e "\e[96m-->  \e[35m${x#*used:}\e" | sed 's/ Shell: bash inxi: 3.0.38 //' | sed 's/B/B -/' | sed 's/:/:     /'
