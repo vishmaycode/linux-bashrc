@@ -35,7 +35,12 @@ alias bt-off='sudo systemctl stop bluetooth.service'
 # set screen brightness
 alias sb='~/.config/scripts/set_brigtness'
 
+# Search files in the current folder
+alias f="find . | grep "
+
 # git related alias
 alias gs='git status'
 alias gf='git fetch --all'
 alias gp='git pull'
+
+
