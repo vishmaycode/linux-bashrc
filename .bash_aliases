@@ -9,10 +9,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# enabling and disabling keyboard
-# keybd enable
-# keybd disable
-
 # lampp stack start and stop
 alias xampp-start='sudo /opt/lampp/lampp start'
 alias xampp-stop='sudo /opt/lampp/lampp stop'
