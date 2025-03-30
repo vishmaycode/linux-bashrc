@@ -8,6 +8,8 @@ alias hgrep="history | grep"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
 # lampp stack start and stop
 alias xampp-start='sudo /opt/lampp/lampp start'
