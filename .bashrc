@@ -159,6 +159,7 @@ extract() {
 
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# display ram usage
-# x=`inxi -I`
-# echo -e "\e[96m-->  \e[35m${x#*used:}\e" | sed 's/ Shell: bash inxi: 3.0.38 //' | sed 's/B/B -/' | sed 's/:/:     /'
+# pyenv config
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
