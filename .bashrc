@@ -7,7 +7,6 @@
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
-export HISTFILE="$HOME/.history"
 export HISTCONTROL=erasedups:ignoredups:ignorespace
 export HISTTIMEFORMAT="%F %T "
 
