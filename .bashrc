@@ -121,6 +121,7 @@ extract() {
       *.rar) rar x $archive ;;
       *.gz) gunzip $archive ;;
       *.tar) tar xvf $archive ;;
+      *.tar.xz) tar Jxf $archive ;;
       *.tbz2) tar xvjf $archive ;;
       *.tgz) tar xvzf $archive ;;
       *.zip) unzip $archive ;;
@@ -136,19 +137,27 @@ extract() {
 
 # -- below are the custom system specific changes
 
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # GTK theme for flatpaks
-# export GTK_THEME="WhiteSur-Dark"
+export GTK_THEME="WhiteSur-Dark"
 
 # local binaries
-# export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# nvm config
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+# pyenv config
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
 
 # The Fuck config
 # eval $(thefuck --alias fuck)
-
-# NVM config
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # Atuin config
 # source ~/.local/share/blesh/ble.sh
@@ -158,8 +167,3 @@ extract() {
 # eval "$(atuin init bash)"
 
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# pyenv config
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - bash)"
